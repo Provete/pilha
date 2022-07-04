@@ -1,4 +1,5 @@
 #include "pilha.h"
+#include <stdlib.h>
 
 Pilha* CriarPilha()
 {
@@ -46,7 +47,9 @@ int Pop(Pilha* pilha)
         exit(1);
     }
 
+    //Ultimo elemento vira lixo
     pilha->tamanho--;
+    
     return pilha->info[pilha->tamanho];
 }
 

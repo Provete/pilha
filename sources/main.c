@@ -1,29 +1,25 @@
 #include <stdio.h>
-#include "pilha.h"
+#include "pilha_dinamica.h"
 
 int main()
 {
     Pilha* pilha = CriarPilha();
-    Push(pilha, 5);
-    Push(pilha, 4);
-    Push(pilha, 5);
-    Push(pilha, 1);
-    Push(pilha, 2);
-    Push(pilha, 2112);
-    Push(pilha, 5465);
-    Push(pilha, 5774);
-    Push(pilha, 54645);
-    Push(pilha, 54122);
-    Push(pilha, 59787);
-    Push(pilha, 53123);
-    Push(pilha, 5456312);
-    Push(pilha, 59789);
-    Push(pilha, 54524);
-    Push(pilha, 45645);
-    Push(pilha, 56524);
-    Push(pilha, 5546456);
+    Push(pilha, 3.5);
+    Push(pilha, 7.5);
+    Push(pilha, -34.5);
+    Push(pilha, -32.5);
+    Push(pilha, -33123.5);
+    Push(pilha, 3.5123);
+    Push(pilha, 75.5);
+    Push(pilha, 543.5);
+    Push(pilha, 13.5);
+    Push(pilha, -453.5);
+    Push(pilha, 3.5);
+    Push(pilha, -45.5);
 
     Imprimir(pilha);
-    printf("Topo: %d\n", VerTopo(pilha));
+
+    Liberar(pilha);
+    Imprimir(pilha);
     return 0;
 }
